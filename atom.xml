@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rudy's Notes</title><description>Rudy's Notes</description><link>https://rsusanto.com/</link><language>en</language><copyright>Copyright 2022, Ronalds Vilcins</copyright><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><generator>Hugo - gohugo.io</generator><docs>http://cyber.harvard.edu/rss/rss.html</docs><atom:link href="https://ronaldsvilcins.com/atom.xml" rel="self" type="application/atom+xml"/><item><title>Hugo: Quick and Easy Setup</title><link>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</link><description>&lt;p>We will start this tutorial with a &lt;em>TL;DR&lt;/em> section to get a simple Hugo project up and running, followed by the remaining sections to describe it.&lt;/p>
+&lt;h2 id="tldr">TL;DR &lt;a href="#tldr" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>These are a few CLI commands which I summarize from the official Hugo documentation page to get a simple Hugo project up and running.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Install Hugo static site generator&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new project&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new site homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Download and select preferred theme&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;theme = &amp;#39;bilberry&amp;#39;&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new post&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Hello, **world**.&amp;#34;&lt;/span> &amp;gt;&amp;gt; content/posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Run built-in development server (http://localhost:1313)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Easy, isn&amp;rsquo;t it!&lt;/p>
+&lt;p>Now that we have a brief idea of how it works, let&amp;rsquo;s describe the above commands one by one to understand them.&lt;/p>
+&lt;h2 id="installation">Installation &lt;a href="#installation" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>First of all, we need to install the Hugo CLI. On macOS, it can be installed with Homebrew. It might be slightly different on other platforms, which in that case you can check the &lt;a href="https://gohugo.io/getting-started/installing" target="_blank" rel="noopener">official documentation&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo version &lt;span style="color:#6272a4"># to verify a successful installation&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-new-project">Create a new project &lt;a href="#create-a-new-project" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>After we have our Hugo CLI ready, we can now easily create a project from the command line. We will also need to initialize the project with the Git versioning system as we will likely save this project in the Git repository later. Here we name the project as &lt;code>homepage&lt;/code>, but it could be anything meaningful.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="select-theme">Select theme &lt;a href="#select-theme" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>We need to download and select our preferred theme as well since a new Hugo project does not come with a default theme. There are a lot of free themes that we can choose from. I found that &lt;a href="https://themes.gohugo.io/" target="_blank" rel="noopener">themes.gohugo.io&lt;/a> and &lt;a href="https://jamstackthemes.dev/ssg/hugo/" target="_blank" rel="noopener">jamstackthemes.dev&lt;/a> have plenty of great themes suitable for any website purpose.&lt;/p>
+&lt;p>So basically, we need to get the theme&amp;rsquo;s URL which is in form of a Git repository URL. We then need to clone it into the &lt;code>themes/&lt;/code> directory. After that, we have to update Hugo&amp;rsquo;s configuration file to use the new theme we have downloaded. Here is how we typically do it:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;theme = &amp;#39;bilberry&amp;#39;&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-the-first-content">Create the first content &lt;a href="#create-the-first-content" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>After everything is set up, we can now create our first content. We will create a new post here. Hugo uses Markdown formatting to render content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Hello, **world**.&amp;#34;&lt;/span> &amp;gt;&amp;gt; content/posts/hello-world.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="run-a-development-server">Run a development server &lt;a href="#run-a-development-server" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>When all the above steps are done, now is the time to see the actual site looks in the browser. Hugo comes with a built-in development server that we can easily run it locally. After we run the following command, we can check it on its default address at &lt;code>http://localhost:1313&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion &lt;a href="#conclusion" class="hash g">#&lt;/a>&lt;/h2>
+&lt;p>So that is a quick setup to start working with Hugo.&lt;/p>
+&lt;p>As a static site generator, Hugo comes with advantages which a few that I can think of are:&lt;/p>
+&lt;ul>
+&lt;li>Blazing fast website loading since everything is prerendered and no server scripting.&lt;/li>
+&lt;li>Easy and straightforward learning curve since it uses common technologies; Markdown, HTML, CSS, and JavaScript.&lt;/li>
+&lt;li>A lot of themes are available for any website purpose.&lt;/li>
+&lt;/ul></description><author>ronalds.vilcins@gmail.com (Ronalds Vilcins)</author><guid>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</guid><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate></item></channel></rss>
