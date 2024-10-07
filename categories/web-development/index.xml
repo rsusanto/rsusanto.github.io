@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web Development on Rudy Susanto</title><link>https://rsusanto.com/categories/web-development/</link><description>Recent content in Web Development on Rudy Susanto</description><generator>Hugo</generator><language>en-us</language><copyright>&amp;copy; 2024 Rudy Susanto</copyright><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rsusanto.com/categories/web-development/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo: Quick and Easy Setup</title><link>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</guid><description>&lt;p>We will start this tutorial with a &lt;em>TL;DR&lt;/em> section to get a simple Hugo project up and running, followed by the remaining sections to describe it.&lt;/p>
+&lt;h4 id="tldr">TL;DR&lt;/h4>
+&lt;p>These are a few CLI commands which I summarize from the official Hugo documentation page to get a simple Hugo project up and running.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Install Hugo static site generator&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new project&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new site homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Download and select preferred theme&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;theme = &amp;#39;bilberry&amp;#39;&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new post&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Hello, **world**.&amp;#34;&lt;/span> &amp;gt;&amp;gt; content/posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Run built-in development server (http://localhost:1313)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Easy, isn&amp;rsquo;t it!&lt;/p></description></item></channel></rss>

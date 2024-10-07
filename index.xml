@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rudy Susanto</title><link>https://rsusanto.com/</link><description>Recent content on Rudy Susanto</description><generator>Hugo</generator><language>en-us</language><copyright>&amp;copy; 2024 Rudy Susanto</copyright><lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rsusanto.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Enable Private DNS on Android TV</title><link>https://rsusanto.com/posts/enable-private-dns-on-android-tv/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>https://rsusanto.com/posts/enable-private-dns-on-android-tv/</guid><description>&lt;p>Android comes with a setting called Private DNS that allows us to use &lt;a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DNS-over-TLS&lt;/a> instead of a regular DNS as the system-wide domain resolver.
+However, because that setting is hidden on Android TV, enabling it there is not as easy as enabling it on Android smartphones.&lt;/p>
+&lt;p>But thanks to Android&amp;rsquo;s Developer Mode, we can enable it on Android TV via &lt;abbr title="Android Debug Bridge">ADB&lt;/abbr> command.
+The following below are the steps to enable it there.&lt;/p></description></item><item><title>About</title><link>https://rsusanto.com/about/</link><pubDate>Thu, 13 Jan 2022 10:29:04 +0700</pubDate><guid>https://rsusanto.com/about/</guid><description>&lt;h4 id="about">About&lt;/h4>
+&lt;p>Hello there! 👋&lt;/p>
+&lt;p>Welcome to my site, where I put my experiments and random thoughts to revisit them later in case I forget. I hope you can find something useful here too.&lt;/p>
+&lt;p>My latest post is titled &lt;a href="https://rsusanto.com/posts/enable-private-dns-on-android-tv/">Enable Private DNS on Android TV&lt;/a>.&lt;/p>
+&lt;h4 id="bio">Bio&lt;/h4>
+&lt;p>My name is Rudy Susanto. I live in Sidoarjo, Indonesia.&lt;/p>
+&lt;p>I&amp;rsquo;m a web developer at &lt;a href="https://www.peepso.com/" target="_blank">PeepSo&lt;/a>, working on WordPress plugins and theme development.&lt;/p>
+&lt;h4 id="contact">Contact&lt;/h4>
+&lt;p>You can reach me at &lt;code>rudy&lt;/code> (𝑎𝑡) &lt;code>rsusanto&lt;/code> (𝑑𝑜𝑡) &lt;code>com&lt;/code>.&lt;/p></description></item><item><title>Hugo: Quick and Easy Setup</title><link>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</link><pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate><guid>https://rsusanto.com/posts/hugo-quick-and-easy-setup/</guid><description>&lt;p>We will start this tutorial with a &lt;em>TL;DR&lt;/em> section to get a simple Hugo project up and running, followed by the remaining sections to describe it.&lt;/p>
+&lt;h4 id="tldr">TL;DR&lt;/h4>
+&lt;p>These are a few CLI commands which I summarize from the official Hugo documentation page to get a simple Hugo project up and running.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Install Hugo static site generator&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new project&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new site homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> homepage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Download and select preferred theme&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;theme = &amp;#39;bilberry&amp;#39;&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Create a new post&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;Hello, **world**.&amp;#34;&lt;/span> &amp;gt;&amp;gt; content/posts/hello-world.md
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># Run built-in development server (http://localhost:1313)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Easy, isn&amp;rsquo;t it!&lt;/p></description></item></channel></rss>
